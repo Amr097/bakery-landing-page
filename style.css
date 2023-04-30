@@ -2,7 +2,7 @@
  box-sizing: border-box;
  margin: 0;
  padding: 0;
- font-family: Arial, Helvetica, sans-serif;
+font-family: Helvetica, Arial, sans-serif;
 }
 
 main{
@@ -21,8 +21,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem;
-    
+    padding: 1.5rem 0.5rem;
     background-color: #f4b8a03b;
 }
 
@@ -42,8 +41,7 @@ main{
     flex: 1;
     gap: 2rem;
     font-size: medium;
-    font-weight: 500;
-    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
     align-items: center;
 }
 
@@ -52,26 +50,29 @@ main{
     color: black;
 }
 
+a.nav-item{
+    font-family: 'Varela Round' , Helvetica, Arial, sans-serif;
+}
+
 section.home{
     display: inline-flex;
     margin: 0 auto;
-    gap: 25px
+    justify-content: space-between;
 }
 
 section.home .card{
     display: flex;
     flex-direction: column;
     flex:1;
-    margin: 5rem 0;
-    margin-left: 10rem;
-    padding: 0 5rem;
-    padding-right: 3rem;
+    margin: 5rem 3rem 0;
+    padding: 0 5rem 0 0;
     line-height: 1;
 }
 
 section.home .card p{
     padding: 0.85rem 0;
     font-size: medium;
+    max-width: 400px;
 }
 
 section.home .card h1{
@@ -84,7 +85,7 @@ section.home .card h2{
 color: #ebb733ed;
 }
 
-section.home .card button {
+section.home .card button, .blog-card button {
   width: 6rem;
   height: 1.9rem;
   border: 1px rgb(186, 184, 182) solid;
@@ -97,8 +98,171 @@ section.home .card button {
 section.home img{
     flex: 1;
     height: auto;
+    width: 100%;
     max-width: 550px;
     min-height: 450px;
-    margin: 5rem 0;
-    border-radius: 8rem 0 0 3rem;
+    margin-top: 2.5rem;
+    border-radius: 8rem 1rem 1rem 3rem;
+}
+
+section.products , .blogs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5rem;
+    margin-left: 5rem;
+    position:static
+}
+
+header.products-head, .blogs-head{
+    display: flex;
+    flex-direction: column;
+    align-content:space-around;
+    padding-left:5rem;
+    margin-left: 3rem;
+   
+}
+
+header.products-head h1{
+    color: rgb(50, 35, 16);
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.blogs-head h1{
+    color: rgb(50, 35, 16);
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.blogs-head h3{
+    color: #ebb733ed;
+}
+
+header.products-head h3{
+    color: #ebb733ed;
+}
+
+div.background-products{
+    height: 210px;
+    width: 1000px;
+    background-image: linear-gradient(rgb(134, 132, 132), rgb(180, 180, 173));
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-size: cover;
+}
+
+div.products{
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 3.5rem;
+    margin-bottom: 6rem;
+}
+
+div.products figure{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+figure img{
+    flex: auto;
+    max-width: 300px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+section.blogs{
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+div.blogs-head{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.blog-card{
+    text-align: center;
+   gap: 30px;
+}
+
+.blog-card h1{
+    padding: 15px 0;
+    color: rgb(50, 35, 16);
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.blog-card p{
+    color: #ebb733ed;
+    padding-bottom: 10px;
+}
+
+
+.blog-card img{
+    min-height: 250px;
+    width: 450px;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 13px -9px 17px 0px rgba(188, 172, 172, 0.562);
+}
+
+#blogs{
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+
+section.contact{
+    display: flex;
+    background-color: #5e3423ed ;
+    color: white;
+    padding-bottom: 1.5rem ;
+}
+
+section.contact div{
+    flex: 1;
+    display: flex;
+}
+
+section.contact div h1{
+    margin: 0 4rem;
+    padding: 2.5rem 0.4rem 0 0.4rem;
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+section.contact div h2{
+  
+    padding: 1.6rem 0 0.5rem 0;
+    flex: 1;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+section.contact div .contact-list{
+margin: 0;
+flex: 1;
+padding: 0;
+display: flex;
+flex-direction: column;
+}
+
+.contact-list ul{
+   display: flex;
+   line-height: 1.5;
+   flex-direction: column;
+   align-items: flex-start;
+   padding-left: 0.5rem;
 }
